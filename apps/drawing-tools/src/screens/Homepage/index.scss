@@ -1,0 +1,10 @@
+.paint-wrapper {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+
+  &__toolbar {
+    margin-top: 90px;
+  }
+}

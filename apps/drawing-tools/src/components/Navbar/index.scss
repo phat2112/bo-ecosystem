@@ -1,0 +1,47 @@
+@import "../../assets//variables.scss";
+
+.navbar {
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border: 1px solid $boder_line;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__theme {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $boder_line;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    transform: translateY(90%);
+
+    &__item {
+      padding: 8px;
+      border: 1px solid $boder_line;
+      transition: all 0.2s;
+      cursor: pointer;
+
+      &:last-child {
+        border-top: none;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

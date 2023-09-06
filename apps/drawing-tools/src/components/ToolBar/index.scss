@@ -1,0 +1,87 @@
+@import "../../assets/_variables.scss";
+
+.toolbar {
+  &__wrapper {
+    width: 15%;
+    border-left: 1px solid $boder_line;
+    padding: 20px 0px 0px 20px;
+    height: calc(100vh - 90px);
+    box-sizing: border-box;
+  }
+
+  &__color-picker {
+    &__line-selected {
+      width: 80%;
+      height: 30px;
+      border: 2px solid $boder_line;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5%;
+        left: 1%;
+        width: 98%;
+        height: 90%;
+        border-radius: 6px;
+
+        background: var(--line-selected-color);
+      }
+    }
+
+    &__panel {
+      margin-top: 12px;
+    }
+  }
+
+  &__canvas-width {
+    &__label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 20px;
+    }
+
+    &__range {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      width: 80%;
+
+      &::-webkit-slider-runnable-track {
+        background: $black-color;
+        border-radius: 20px;
+        height: 0.5rem;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: -4px;
+        background-color: $white-color;
+        box-shadow: 0 0 2px 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__cta-button {
+    margin-top: 20px;
+
+    button {
+      padding: 12px;
+      background: transparent;
+      border: 1px solid $boder_line;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+}
